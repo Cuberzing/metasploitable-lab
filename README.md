@@ -35,7 +35,7 @@ Both machines ran on the same Windows host via VirtualBox, with networking confi
 
 ---
 
-## 🔍 Phase 1 — Reconnaissance
+## 🔍 Phase 1 Reconnaissance
 
 Before exploiting anything, identified the target's open services:
 
@@ -43,16 +43,16 @@ Before exploiting anything, identified the target's open services:
 nmap -A <target-ip>
 ```
 
-Key finding: **vsftpd 2.3.4** running on port 21 — a version known to contain a backdoor vulnerability.
+Key finding: **vsftpd 2.3.4** running on port 21 a version known to contain a backdoor vulnerability.
 
 ---
 
-## 💥 Phase 2 — Exploitation (vsFTPd 2.3.4 Backdoor)
+## 💥 Phase 2 Exploitation (vsFTPd 2.3.4 Backdoor)
 
 **CVE:** CVE-2011-2523
 
 **What the vulnerability is:**
-A malicious backdoor was introduced into the vsFTPd 2.3.4 source code. When a username containing `:)` is sent during login, the backdoor triggers and opens a root shell on port 6200 — no password required.
+A malicious backdoor was introduced into the vsFTPd 2.3.4 source code. When a username containing `:)` is sent during login, the backdoor triggers and opens a root shell on port 6200 no password required.
 
 **Metasploit commands:**
 ```bash
@@ -62,7 +62,7 @@ set RHOSTS <target-ip>
 run
 ```
 
-**Result:** Root Meterpreter session — full control of the target machine.
+**Result:** Root Meterpreter session full control of the target machine.
 
 ---
 
