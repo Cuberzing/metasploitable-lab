@@ -17,7 +17,7 @@ A full penetration test performed against Metasploitable 2, an intentionally vul
 
 ## 🎯 Objective
 
-Simulate a real-world penetration test against a vulnerable machine. Gain initial access, escalate to root, extract credentials, and crack password hashes — documenting every step.
+Simulate a real-world penetration test against a vulnerable machine. Gain initial access, escalate to root, extract credentials, and crack password hashes documenting every step.
 
 ---
 
